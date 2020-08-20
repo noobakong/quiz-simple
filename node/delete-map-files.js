@@ -3,10 +3,23 @@
  * @param {string} p
  * @return {void}
  */
+const fs = require('fs')
+const path = require('path')
 const deleteMapFiles = (p) => {
   // 请实现……
+  let files = fs.readdirSync(path.join(__dirname,p))
+  files.forEach((file)=>{
+    const itemPath = path.join(__dirname,p,file)
+    let itemState = fs.statSync(itemPath)
+    if(itemState.isDirectory()){
+      deleteMapFiles(p+'/'+file)
+    }
+    if(path.extname(itemPath)==='.map'){
+      fs.unlinkSync(itemPath)
+    }
+  })
 };
-
+deleteMapFiles('./playground')
 // * ------------------------------------------------
 
 // * playground 文件夹目前的目录结构如下：
