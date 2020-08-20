@@ -7,6 +7,21 @@
  */
 const getSumOfTriple = (arr, start, end) => {
   // 请实现……
+  if(start&&end){
+    arr = arr.filter((val,index,arr)=>{
+      return val > start && val < end
+    })
+  }
+  arr = arr.sort()
+  let arrtemp = []
+  arr.forEach((val,index,arr)=>{
+    if(val%3===0){
+      arrtemp.push(val)
+    }
+  })
+  return arrtemp.reduce((count=0,value)=>{
+    return count+=value
+  })
 };
 
 // * ---------------- 实现的效果：

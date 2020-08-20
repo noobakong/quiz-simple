@@ -5,6 +5,10 @@
  */
 const getHostName = (url) => {
   // 请实现……
+  url = url.match(/https?:\/\/([^/]+)\//i)
+  if (url && url[1]) {
+      return url[1]
+  }
 };
 
 // * ---------------- 实现的效果：

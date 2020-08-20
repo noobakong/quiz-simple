@@ -10,6 +10,17 @@ Demo 代码可以新建一个或多个文件（不限），
 
 下面是 PostCSS 编译后生成的代码，如果你来写源码，你会怎么写。
 （实现方式不限，比如可以用 CSS in JS、Vue style 等方式）
+```css
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+.container > div:nth-child(1) {
+  flex-grow: 1;
+}
+```
+
 
 ```css
 .container {
@@ -43,5 +54,9 @@ Demo 代码可以新建一个或多个文件（不限），
 > .form--theme-xmas {
 > }
 > ```
+- 使用scss
+- css的默认样式的重置
+- 渐进增强和优雅降级
+- 类名及id名的规范命名
 
 答：

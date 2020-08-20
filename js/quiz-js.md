@@ -28,4 +28,4 @@ const getLoglevel = () => {
 };
 ```
 
-答：
+答： 调用getLoglevel函数 获取localStorage.loglevel如果localStorage.loglevel没有值，则返回'INFO' 类似于||

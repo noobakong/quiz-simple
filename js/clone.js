@@ -3,9 +3,13 @@
 
 // * ---------------- 解决下文中缺少 clone 函数的问题……
 // 在这里写代码……
-
+function clone(obj){
+  // 实现对象的深克隆
+  return JSON.parse(JSON.stringify(obj))
+}
 // * ---------------- 实现的效果：
-
+//true
+//true
 {
   const data = {
     person: [

@@ -10,9 +10,22 @@ Git 是一个广泛使用的版本管理工具，适合团队开发。
 请直接在这里作答。
 
 答：
+- git init
+- git pull
+- git add
+- git commit
+- git push
+- git branch
+- git checkout branch
+- git status
+- git reflog
+- git stash
+- git reset
 
 ## Q2
 
 你知道和用过哪些 Git 的方法论和技巧
 
 答：
+- 使用git完成多人协作开发
+- 使用git stash 暂存工作状态进行切换
